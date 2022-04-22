@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import styled from "styled-components"
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-
+import { useNavigate } from "react-router-dom";
 import '@splidejs/react-splide/css';
 
 function Popular() {
   const [popularRecipes, setPopularRecipes] = useState([])
+  const navigate = useNavigate()
 
   // useEffect to run api call as soon as component gets mounted to get inital data
   useEffect(() => {
@@ -42,10 +43,10 @@ function Popular() {
         }}aria-label="Popular Recipes">
 
           {
-            popularRecipes.map((recipe, idx) => {
+            popularRecipes.map((recipe) => {
               if (recipe.image) {
-               return <SplideSlide key={idx}>
-                  <Card>
+               return <SplideSlide key={recipe.id}>
+                  <Card onClick={() => navigate(`/recipe/${recipe.id}`)}>
                     <p>{recipe.title}</p>
                     <img src={recipe.image} alt={recipe.title} />
                   </Card>
@@ -67,6 +68,7 @@ const Wrapper = styled.div`
 `
 
 const Card = styled.div`
+  cursor: pointer;
   min-height: 30rem;
   border-radius: 2rem;
   overflow: hidden;

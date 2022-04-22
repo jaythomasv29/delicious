@@ -7,12 +7,15 @@ function SearchBar() {
     const navigate = useNavigate()
     const [searchValue, setSearchValue] = useState('');
 
+
+
     const handleChange = (e) => {
         setSearchValue(e.target.value)
     }
 
     const submitHandler = (e) => {
         e.preventDefault()
+        // navigate sends to <SearchedRecipe />
         navigate(`/searched/${searchValue}`)
     }
     return (
