@@ -10,13 +10,12 @@ function Cuisine() {
 
     const getCuisine = async (name) => {
         let API_KEY = process.env.REACT_APP_API_KEY
+        console.log('cuisine',API_KEY)
         try {
-            console.log(API_KEY)
-
             const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&cuisine=${name}&number=10`)
             const data = await response.json()
             setCuisineFoods(data.results)
-            localStorage.setItem('cuisine', JSON.stringify(data.results))
+            localStorage.setItem(params.type, JSON.stringify(data.results))
 
         } catch (e) {
             console.log(e.error)
@@ -24,8 +23,14 @@ function Cuisine() {
 
     }
     useEffect(() => {
-        console.log('getting new data');
-        getCuisine(params.type)
+        console.log('getting data from localStorage');
+        if(JSON.parse(localStorage.getItem(params.type))) {
+            
+            setCuisineFoods(JSON.parse(localStorage.getItem(params.type)))
+        } else {
+            console.log('getting new data');
+            getCuisine(params.type)
+        }
 
     }, [params.type])
 
