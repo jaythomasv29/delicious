@@ -1,15 +1,15 @@
 import './App.css';
+import { BrowserRouter } from 'react-router-dom'
 
 import Pages from './pages/Pages';
 
 function App() {
   
   return (
-    <div>
-      
-     <Pages />
-    </div>
-  );
+    <BrowserRouter>
+      <Pages />
+    </BrowserRouter>
+  )
 }
 
 export default App;

@@ -1,13 +1,14 @@
 import React from 'react'
+import Category from '../components/Category'
 import Featured from '../components/Featured'
 import Popular from '../components/Popular'
 
 function Home() {
   return (
     <div>
-        <Featured />
-        <Popular />
-
+      <Category />
+      <Featured />
+      <Popular />
     </div>
   )
 }
