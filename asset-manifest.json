@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/delicious-app/static/css/main.b25ea52a.css",
-    "main.js": "/delicious-app/static/js/main.f34cdd97.js",
-    "static/js/787.aedb2613.chunk.js": "/delicious-app/static/js/787.aedb2613.chunk.js",
-    "index.html": "/delicious-app/index.html",
-    "main.b25ea52a.css.map": "/delicious-app/static/css/main.b25ea52a.css.map",
-    "main.f34cdd97.js.map": "/delicious-app/static/js/main.f34cdd97.js.map",
-    "787.aedb2613.chunk.js.map": "/delicious-app/static/js/787.aedb2613.chunk.js.map"
+    "main.css": "/delicious/static/css/main.b25ea52a.css",
+    "main.js": "/delicious/static/js/main.ac8909d2.js",
+    "static/js/787.aedb2613.chunk.js": "/delicious/static/js/787.aedb2613.chunk.js",
+    "index.html": "/delicious/index.html",
+    "main.b25ea52a.css.map": "/delicious/static/css/main.b25ea52a.css.map",
+    "main.ac8909d2.js.map": "/delicious/static/js/main.ac8909d2.js.map",
+    "787.aedb2613.chunk.js.map": "/delicious/static/js/787.aedb2613.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b25ea52a.css",
-    "static/js/main.f34cdd97.js"
+    "static/js/main.ac8909d2.js"
   ]
 }
