@@ -12,7 +12,7 @@ function Featured() {
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_API_KEY
     const getFeatured = async () => {
-      const response = await fetch(`https://api.spoonacular.com/recipes/random?number=10&tags=asian&apiKey=${API_KEY}`)
+      const response = await fetch(`https://api.spoonacular.com/recipes/random?number=10&tags=asian&apiKey=cab583a1414b47148062586b8ced947e`)
       const data = await response.json()
       setFeaturedRecipes(data.recipes)  // set the data to state
       localStorage.setItem('featured', JSON.stringify(data.recipes))  // set localStorage to cache api data

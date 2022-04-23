@@ -8,7 +8,7 @@ function SearchedRecipe() {
 
   useEffect(() => {
     const getSearched = async (name) => {
-      const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${params.search}&number=10`)
+      const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=cab583a1414b47148062586b8ced947e&query=${params.search}&number=10`)
       const data = await response.json()
       console.log(data.results)
       setRecipes(data.results)

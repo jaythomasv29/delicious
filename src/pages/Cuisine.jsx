@@ -10,10 +10,9 @@ function Cuisine() {
     const navigate = useNavigate();
 
     const getCuisine = async (name) => {
-        let API_KEY = process.env.REACT_APP_API_KEY
-        console.log('cuisine',API_KEY)
+
         try {
-            const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&cuisine=${name}&number=10`)
+            const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=cab583a1414b47148062586b8ced947e&cuisine=${name}&number=10`)
             const data = await response.json()
             setCuisineFoods(data.results)
             localStorage.setItem(params.type, JSON.stringify(data.results))
