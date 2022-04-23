@@ -39,8 +39,12 @@ function Cuisine() {
     console.log(cuisineFoods)
     return (
         <>
+            <Grid 
+                animate={{ opacity: 1}}
+                initial={{ opacity: 0}}
+                transition={{ duration: 0.5 }}
             
-            <Grid>
+            >
                 {cuisineFoods && cuisineFoods.map((recipe) => {
                     if (recipe.image) {
                         return <Card key={recipe.id} onClick={() => navigate(`/recipe/${recipe.id}`)}>
@@ -55,7 +59,7 @@ function Cuisine() {
     )
 }
 
-const Grid = styled.div`
+const Grid = styled(motion.div)`
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));

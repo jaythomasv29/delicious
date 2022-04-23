@@ -33,3 +33,11 @@ Demo Here:
 * [React Icons Reference](https://react-icons.github.io/react-icons)
 ### CSS Grid
 * Dynamically add a CSS Grid that fits to screen using `grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));`
+
+### Framer Motion
+* [Framer Motion Documentation](https://www.framer.com/docs/)
+* Add pleasant animations during page load using props `<motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      transition={{ duration: 0.8 }}
+    />`
