@@ -3,6 +3,7 @@
   "homepage": "http://jaythomasv29.github.io/delicious-app",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "@splidejs/react-splide": "^0.7.5",
     "@testing-library/jest-dom": "^5.16.4",
