@@ -49,7 +49,7 @@ const FoodLink = styled(NavLink)`
     color: #ffffff;
     margin: 15px;
     border-radius: 40%;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     width: 75px;
     height: 75px;
     display: flex;
@@ -57,7 +57,7 @@ const FoodLink = styled(NavLink)`
     align-items: center;
     justify-content: center;
     font-size: 12px;
-    background-color: #515151;
+    background-color: #5e5e5e;
     text-align: center;
     text-decoration: none;
     cursor: pointer;  

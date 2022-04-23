@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import Category from '../components/Category';
+
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 
 function Cuisine() {
     const [cuisineFoods, setCuisineFoods] = useState([])
     let params = useParams();
+    const navigate = useNavigate();
 
     const getCuisine = async (name) => {
         let API_KEY = process.env.REACT_APP_API_KEY
@@ -38,13 +39,13 @@ function Cuisine() {
     console.log(cuisineFoods)
     return (
         <>
-            <Category />
+            
             <Grid>
-                {cuisineFoods && cuisineFoods.map((foodItem) => {
-                    if (foodItem.image) {
-                        return <Card key={foodItem.id}>
-                            <img src={foodItem.image} alt={foodItem.title} />
-                            <h4>{foodItem.title}</h4>
+                {cuisineFoods && cuisineFoods.map((recipe) => {
+                    if (recipe.image) {
+                        return <Card key={recipe.id} onClick={() => navigate(`/recipe/${recipe.id}`)}>
+                            <img src={recipe.image} alt={recipe.title} />
+                            <h4>{recipe.title}</h4>
                         </Card>
 
                     }
@@ -62,6 +63,7 @@ const Grid = styled.div`
 `
 
 const Card = styled.div`
+    cursor: pointer;
     img {
         width: 100%;
         border-radius: 2rem;
